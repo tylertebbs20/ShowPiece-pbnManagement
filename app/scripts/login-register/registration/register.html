@@ -1,0 +1,24 @@
+<div class="registerOuterBlock">
+  <div class="freeTrialRegisterHeader"><h1>Sign Up For Your 14 Day Free Trial!</h1></div>
+  <div class="registerBlock">
+    <h1 class="text-center"> Register </h1>
+    <div class="col-sm-6 col-sm-offset-3">
+      <form ng-submit="register()">
+        <div class="registerTextEmail">
+          <label> Email </label>
+          <input class="form-control" ng-model="user.email" placeholder="Email"/>
+        </div>
+        <br>
+        <div class="registerTextPassword">
+          <label>Password</label>
+          <input ng-model="user.pw" type="password" class="form-control" placeholder="Password" />
+        </div>
+        <br>
+        <button type="submit" class="registerButton">Register</button>
+        <br>
+        <div class="loginLinkOnRegisterPage"><a href="#/login">Login?</a></div>
+      </form>
+    </div>
+  </div>
+</div>
+

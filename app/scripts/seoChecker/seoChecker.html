@@ -1,0 +1,115 @@
+<div class="mainDashboardDiv">
+  <div class="dashboardColumn">
+    <div class="dashboardColumnLink">  
+      <div class="dashboardLink"><a ui-sref="secure.dashboard">SEO Training Courses</a></div>
+    </div>
+    <div class="siteMetricColumnLink">  
+      <div class="siteMetricLink"><a ui-sref="secure.sitemetrics"> Website Analysis </a></div>
+    </div>
+    <div class="seoCheckerColumnLink">  
+      <div class="seoCheckerLink"><a ui-sref="secure.seochecker"> Seo Article Checker </a></div>
+    </div>
+  </div>
+
+  <div class="dashboardDisplay">
+ 	<div class="seoCheckerInputFields">
+
+ 		<div class="htmlInputArea">
+ 			HTML Article: <textarea class="htmlInput" placeholder="Enter the html of your article without the layout html" ng-model="htmlField"></textarea>
+ 		</div>
+
+ 		<br>
+
+ 		<div class="keywordInputArea">
+ 			Keyword: <input class="keywordInput" type="text" ng-model="keywordField" placeholder="Enter keyword for analyzation">
+ 		</div>
+
+ 		<br>
+
+ 		<div class="metaInputArea">
+ 			Meta Description: <input class="metaInput" type="text" ng-model="metaField" placeholder="Enter meta description sentence.">
+ 		</div>
+
+ 		<br>
+
+ 		<div class="titleInputArea">
+
+ 			Title: <input class="titleInput" type="text" ng-model="titleField" placeholder="Enter meta meta title.">
+ 		</div>
+
+ 		<br>
+
+ 		<div class="urlInputFieldArea">
+ 			Url: <input class="urlInputField" type="text" placeholder="Enter the URL to the article (Can also be an unpublished url)">
+ 		</div>
+
+ 		<br>
+
+ 		<div class="getSEOAnalysisButtonArea">
+ 		<button ng-click="getSeoAnalysis()" ng-disabled="disableButton">Get SEO Analysis</button>
+ 		</div>
+ 	</div>
+
+	 	<div class="articleResultsArea">
+	 		<div class="articleCheckerResults">
+	 			<h1>Results</h1>
+	 			<h4>Article Results:</h4>
+	 				<ul>
+		 				<li># of Images in Article: <b>{{articleImageCount}}</b></li>
+			 			<li># of Keywords in Article: <b>{{articleKeywordCount}}</b></li>
+			 			<li># of Links in Article: <b>{{outboundLinks}}</b></li>
+			 			<li># of Words in Article: <b>{{wordCount}}</b></li>
+		 			</ul>
+		 		<h4>Keyword Results:</h4>
+		 			<ul>
+		 				<li># of Words in Target Keyword: <b>{{keywordLength}}</b></li>
+		 			</ul>
+		 		<h4>Meta Description Results:</h4>
+		 			<ul>
+		 				<li># of Keywords in Meta Description: <b>{{metaDescriptionKeywordCount}}</b></li>
+		 				<li># of Characters in Meta Description: <b>{{metaDescriptionCharacterlength}}</b></li>
+		 			</ul>
+
+	 		</div>
+	 		<div class="articleCheckerSuggestions">
+	 			<h1>Suggestions</h1>
+	 			<h4>Article Suggestions:</h4>
+	 				<ul>
+		 				<li># of Keywords in Title: Max: <b>{{titleKeywordCountMax}}</b> | Min: <b>{{titleKeywordCountMin}}</b></li>
+			 			<li># of Characters in Title: Max: <b>{{titleCharacterMax}}</b> | Min: <b>{{titleCharacterMin}}</b> </li>
+			 			<li># of Images in Article: Min: <b>{{articleImageCountMin}}</b> 
+			 			</br>
+			 			Recommendation: <b><i>{{articleImageCountRecommendation}}</i></b> </li>
+			 			<li># of Keywords in Article: Max: <b>{{articleKeywordCountMaxSuggestion}}</b> | Min: <b>{{articleKeywordCountMinSuggestion}}</b> </li>
+			 			<li>Note on Keyword Density: <b>{{articleKeywordDensityRecommendation}}</b></li>
+			 			<li># of Outbound Links in Article: Min: <b>{{outboundLinkMin}}</b> 
+			 			</br>
+			 			Recommendation: <b><i>{{outboundLinkRecommendation}}</i></b> </li>
+			 			<li># of Words in Article: {{wordCount}} 
+			 			</br>
+			 			Recommendation: <b><i>{{wordCountRecommendation}}</i></b> </li>
+		 			</ul>
+		 		<h4>Keyword Suggestions:</h4>
+		 			 <ul>
+		 				<li>Keyword Length Recommendation: <b>{{keywordLengthRecommendation}}</b> </li>
+		 			</ul>
+		 		<h4>Meta Description Suggestions:</h4>
+		 			 <ul>
+		 				<li># of Keywords in Meta Description: Max: <b>{{metaDescriptionKeywordCountMax}}</b> | Min: <b>{{metaDescriptionKeywordCountMin}}</b>
+		 				</br>
+		 				Recommendation:</li>
+		 				<li># of Characters in Meta Description Recommendation: <b><i>{{metaDescriptionKeywordCountRecommendation}}</i></b> </li>
+		 			</ul>
+		 		<h4>Url Suggestions:</h4>
+		 			 <ul>
+		 				<li># of keywords in url: Max: <b>{{urlKeywordCountMax}}</b> | Min: <b>{{urlKeywordCountMin}}</b> </li>
+		 			</ul>
+	 		</div>
+	 		
+	 	</div>
+
+ 	</div>
+
+  </div>
+</div>
+

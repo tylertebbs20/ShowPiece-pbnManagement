@@ -1,0 +1,22 @@
+<div class="loginrOuterBlock">
+  <div class="loginBlock">
+    <h1 class="Loginh1"> Login </h1>
+    <div class="col-sm-6 col-sm-offset-3">
+      <form ng-submit="login()">
+        <div class="loginTextEmail">
+          <label> Email </label>
+          <input class="form-control" ng-model="user.email" placeholder="Email"/>
+        </div>
+        <br>
+        <div class="loginTextPassword">
+          <label>Password</label>
+          <input ng-model="user.pw" type="password" class="form-control" placeholder="Password" />
+        </div>
+        <br>
+        <button type="submit" class="loginButton">Login</button>
+        <br>
+        <div class="RegistLinkOnLoginPage"><a href="#/register">Register?</a></div>
+      </form>
+    </div>
+  </div>
+</div>

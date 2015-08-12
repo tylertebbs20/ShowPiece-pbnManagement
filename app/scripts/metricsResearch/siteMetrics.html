@@ -1,0 +1,84 @@
+<div class="mainDashboardDiv">
+  <div class="dashboardColumn">
+    <div class="dashboardColumnLink">  
+      <div class="dashboardLink"><a ui-sref="secure.dashboard"> Dashboard Training</a></div>
+    </div>
+    <div class="siteMetricColumnLink">  
+      <div class="siteMetricLink"><a ui-sref="secure.sitemetrics"> Website Analysis </a></div>
+    </div>
+  </div>
+
+  <div class="dashboardDisplay">
+    <div class="siteMetricsTopArea">
+      <div class="siteMetricsTop">
+        <div class="inputForm">
+          <form>
+          URL: <input class="urlInput" type="text" placeholder="www.url.com" ng-model="urlField" required>
+            <button ng-click="getMetrics(urlField)" ng-disabled="disableButton">Get Metrics</button>
+          </form> 
+        </div>
+      </div>
+    </div>
+    
+    <div class="siteMetricsMiddleArea">
+      <div class="siteMetricsMiddle">
+
+        <div class="siteMetricsDomainAuthority">
+          <div>
+            <div class="domainAuthorityTitle">Domain Authority:</div>
+           <div class="domainAuthorityCircle">
+            <div class="domainAuthorityResults">{{metrics.pda}}/100</div>
+           </div>
+          </div>
+        </div>
+
+        <div class="siteMetricsPageAuthority">
+          <div>
+            <div class="pageAuthorityTitle">Page Authority:</div>
+            <div class="pageAuthorityCircle">
+              <div class="pageAuthorityResults">{{metrics.upa}}/100</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="siteMetricslinks">
+          <div class="equityLinksArea">
+            <div class="externalEquityLinksTitle">External Equity Links:</div>
+            <div class="externalEquityBox">
+              <div class="externalEquityLinkResults">{{metrics.ueid}}</div>
+            </div>
+          </div>
+          <div class="totalLinksArea">
+            <div class="totalLinksTitle">Total Links:</div>
+            <div class="totalLinksBox">
+              <div class="totalLinkResults">{{metrics.uid}}</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="siteMetricsMozRank">
+          <div class="domainMozrankArea">
+            <div>
+              <div class="domainMozTitle">Domain MozRank:</div>
+              <div class="domainMozCircle">
+              <div class="domainMozResults">{{metrics.umrp}}/10</div>
+             </div>
+            </div>
+          </div>
+
+          <div class="subDomainMozrankArea">
+            <div>
+              <div class="subDomainMozTitle">Subdomain MozRank:
+              <div class="subDomainMozCircle">
+              <div class="subDomainMozResults">{{metrics.fmrp}}/10</div>
+              </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- Use ng-disabled:
+https://docs.angularjs.org/api/ng/directive/ngDisabled -->
