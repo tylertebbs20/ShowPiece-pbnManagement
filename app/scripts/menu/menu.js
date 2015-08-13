@@ -1,4 +1,4 @@
-var app = angular.module('fbAuth');
+var app = angular.module('pbnTools');
 
 app.directive('menu', function(authService){
   return {
