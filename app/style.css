@@ -360,14 +360,48 @@ a:hover, a:active {
 	border-right-style: solid;
 	border-color: black;
 	border-width: 2px;
+}
 
+.feature2Header {
+	font-size: 16px;
+	color: black;
+	text-align: center;
+	margin-top: 3%;
+}
 
+.feature2 img {
+	height: 34%;
+	margin-top: 5%;
+	margin-left: 41%;
+}
+
+.feature2 p {
+	font-size: 13px;
+	margin-left: 9%;
 }
 
 .feature3 {
 	height: 150px;
 	width: 33%;
 }	
+
+.feature3 img {
+	height: 34%;
+	margin-top: 5%;
+	margin-left: 41%;
+}
+
+.feature3Header {
+	font-size: 16px;
+	color: black;
+	text-align: center;
+	margin-top: 3%;
+}
+
+.feature3 p {
+	font-size: 13px;
+	margin-left: 9%;
+}
 
 .mainBox {
 	width: 80%;
@@ -1013,7 +1047,7 @@ a:hover, a:active {
 	border-width: 2px;
 	border-radius: 35px;
 	margin-top: 5%;
-    margin-left: 5%;
+    margin-left: 15%;
 	background-color: white;
 	display: flex;
 	flex-direction: row;
